@@ -1,4 +1,30 @@
-<h1>Home#score</h1>
-<p>Find me in app/views/home/score.html.erb</p>
+<section class="home-container">
+  <h1>Soccer Data</h1>
+  <div class="data-container">
+    <div>
+      <table>
+        <% @all_data.each do |row| %>
+          <tr>
+            <% row.each do |field| %>
+              <td><%= field %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <div>
+      <div class="result-container">
+        <h2>Team:</h2>
+        <p><%= @score_data[:team] %></p>
+      </div>
+  
+      <div class="result-container">
+        <h2>Goal Difference:</h2>
+        <p><%= @score_data[:difference] %></p>
+      </div>
+    </div>
+  </div>
+  
+  <%= link_to 'Home', root_path, class: 'button-link' %>
+</section>
 
-<%= link_to 'Home', root_path %>

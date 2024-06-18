@@ -1,13 +1,32 @@
-<h1>Weather Data</h1>
-<table>
-  <tr>
-    <th>Day</th>
-    <th>Temperature Spread</th>
-  </tr>
-  <tr>
-    <td><%= @weather_data[:day] %></td>
-    <td><%= @weather_data[:spread] %></td>
-  </tr>
-</table>
+<section class="home-container">
+  <h1>Weather Data</h1>
+  <div class="data-container">
+    <div>
+      <h2>Original data</h2>
 
-<%= link_to 'Home', root_path %>
+      <table>
+        <% @all_data.each do |row| %>
+          <tr>
+            <% row.each do |field| %>
+              <td><%= field %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <div>
+      <div class="result-container">
+        <h2>Day:</h2>
+        <p><%= @weather_data[:day] %></p>
+      </div>
+  
+      <div class="result-container">
+        <h2>Temperature Spread:</h2>
+        <p><%= @weather_data[:spread] %></p>
+      </div>
+    </div>
+  </div>
+
+  <%= link_to 'Home', root_path, class: 'button-link' %>
+</section>
+

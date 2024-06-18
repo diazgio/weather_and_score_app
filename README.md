@@ -59,7 +59,7 @@ The application has two main functions:
 - **w_data.dat**: Contains daily weather data.
 - **soccer.dat**: Contains results from the English Premier League.
 
-Make sure to place these files in the `app/data` directory so that the application can read them correctly.
+Make sure to place these files in the `app/assets/data` directory so that the application can read them correctly.
 
 ## Contribution
 

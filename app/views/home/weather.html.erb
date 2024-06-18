@@ -1,4 +1,13 @@
-<h1>Home#weather</h1>
-<p>Find me in app/views/home/weather.html.erb</p>
+<h1>Weather Data</h1>
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Temperature Spread</th>
+  </tr>
+  <tr>
+    <td><%= @weather_data[:day] %></td>
+    <td><%= @weather_data[:spread] %></td>
+  </tr>
+</table>
 
 <%= link_to 'Home', root_path %>
